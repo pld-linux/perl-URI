@@ -2,6 +2,8 @@
 Summary:	Perl URI module
 Summary(pl):	ModuЁ Perla URI
 Summary(pt_BR):	MСdulo URI para Perl
+Summary(ru):	URI - Uniform Resource Identifier (URI) ссылки, как указывает RFC 2396
+Summary(uk):	URI - посилання Uniform Resource Identifier (URI) як визначено в RFC 2396
 Name:		perl-URI
 Version:	1.19
 Release:	1
@@ -17,24 +19,33 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Perl module URI - This package contains the URI.pm module to
-manipulate Uniform Resource Identifier (URI) from RFC 2396.
+This package contains the URI.pm module with friends. The module
+implements the URI class. Objects of this class represent Uniform
+Resource Identifier (URI) references as specified in RFC 2396.
+
+%description -l ru
+Этот пакет содержит URI.pm и сопутствующие модули. Модуль реализует
+Uniform Resource Identifier (URI) ссылки, как указывает RFC 2396.
 
 %description -l pl
-ModuЁ Perla URI. ModuЁ URI.pm sЁu©y do obrСbki ujednoliconych
-identyfikatorСw zasobСw (URI - Uniform Resource Identifier),
-zgodnych z RFC 2396.
+Pakiet ten zawiera moduЁ URI dla Perla. SЁu©y on do obrСbki
+ujednoliconych identyfikatorСw zasobСw (URI - Uniform Resource
+Identifier), zgodnych z RFC 2396.
 
 %description -l pt_BR
 MСdulo Perl URI - Este pacote contИm o modulo URI.pm para manipular
 "Uniform Resource Identifier" (URI) confirme especificado na RFC 2396.
+
+%description -l uk
+Цей пакет м╕стить URI.pm та потр╕бн╕ для нього модул╕. Модуль реал╕зу╓
+посилання Uniform Resource Identifier (URI) як зазначено в RFC 2396.
 
 %prep
 %setup -q -n URI-%{version}
 
 %build
 perl Makefile.PL
-%{__make} 
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT

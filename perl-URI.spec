@@ -3,7 +3,7 @@ Summary:	Perl URI module
 Summary(pl):	Modu³ Perla URI
 Name:		perl-URI
 Version:	1.12
-Release:	1
+Release:	2
 License:	Distributable
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
@@ -14,6 +14,7 @@ BuildRequires:	perl >= 5.6
 BuildRequires:	perl-MIME-Base64
 BuildRequires:	perl-libnet
 Requires:	perl
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

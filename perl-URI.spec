@@ -1,3 +1,6 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	URI
 %define		pnam	URI
@@ -7,18 +10,22 @@ Summary(pt_BR):	MСdulo URI para Perl
 Summary(ru):	URI - Uniform Resource Identifier (URI) ссылки, как указывает RFC 2396
 Summary(uk):	URI - посилання Uniform Resource Identifier (URI) як визначено в RFC 2396
 Name:		perl-URI
-Version:	1.19
-Release:	2
+Version:	1.21
+Release:	1
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6.1
+BuildRequires:	rpm-perlprov >= 3.0.3-18
+%if %{?_without_test:0}%{!?_without_test:1}
 BuildRequires:	perl-MIME-Base64
 BuildRequires:	perl-libnet
-BuildRequires:	rpm-perlprov >= 3.0.3-18
+%endif
 Requires:	perl
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_noautoreq	'perl(Business::ISBN)'
 
 %description
 This package contains the URI.pm module with friends. The module
@@ -48,6 +55,7 @@ MСdulo Perl URI - Este pacote contИm o modulo URI.pm para manipular
 %build
 perl Makefile.PL
 %{__make}
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT

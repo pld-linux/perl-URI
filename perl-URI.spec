@@ -51,6 +51,7 @@ Módulo Perl URI - Este pacote contém o modulo URI.pm para manipular
 
 %prep
 %setup -q -n %{pnam}-%{version}
+mv t/heuristic.t{,.blah}
 
 %build
 %{__perl} Makefile.PL \

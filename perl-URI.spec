@@ -4,7 +4,7 @@ Summary(pl):	Modu³ Perla URI
 Name:		perl-URI
 Version:	1.17
 Release:	1
-License:	Distributable
+License:	distributable
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl

@@ -10,13 +10,13 @@ Summary(pl):	URI - obs³uga ujednoliconych identyfikatorów zasobów (bezwzglêdnych
 Summary(ru):	URI - Uniform Resource Identifier (URI) ÓÓÙÌËÉ, ËÁË ÕËÁÚÙ×ÁÅÔ RFC 2396
 Summary(uk):	URI - ÐÏÓÉÌÁÎÎÑ Uniform Resource Identifier (URI) ÑË ×ÉÚÎÁÞÅÎÏ × RFC 2396
 Name:		perl-URI
-Version:	1.34
+Version:	1.35
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
-# Source0-md5:	78528742ce086b155b19cfcbc67429c2
+# Source0-md5:	1a933b1114c41a25587ee59ba8376f7c
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}

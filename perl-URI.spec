@@ -10,7 +10,7 @@ Summary(pt_BR):	MСdulo URI para Perl
 Summary(ru):	URI - Uniform Resource Identifier (URI) ссылки, как указывает RFC 2396
 Summary(uk):	URI - посилання Uniform Resource Identifier (URI) як визначено в RFC 2396
 Name:		perl-URI
-Version:	1.21
+Version:	1.22
 Release:	1
 License:	distributable
 Group:		Development/Languages/Perl

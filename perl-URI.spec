@@ -2,7 +2,7 @@
 Summary:	Perl URI module
 Summary(pl):	Modu³ Perla URI
 Name:		perl-URI
-Version:	1.16
+Version:	1.17
 Release:	1
 License:	Distributable
 Group:		Development/Languages/Perl

@@ -6,21 +6,21 @@
 %define	pdir	URI
 %define	pnam	URI
 Summary:	URI - Uniform Resource Identifiers (absolute and relative)
-#Summary(pl):	
+Summary(pl):	URI - obs³uga ujednoliconych identyfikatorów zasobów (bezwzglêdnych i wzglêdnych)
 Summary(ru):	URI - Uniform Resource Identifier (URI) ÓÓÙÌËÉ, ËÁË ÕËÁÚÙ×ÁÅÔ RFC 2396
 Summary(uk):	URI - ÐÏÓÉÌÁÎÎÑ Uniform Resource Identifier (URI) ÑË ×ÉÚÎÁÞÅÎÏ × RFC 2396
 Name:		perl-URI
 Version:	1.22
-Release:	2
+Release:	3
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6.1
-BuildRequires:	rpm-perlprov >= 3.0.3-18
 %if %{?_without_test:0}%{!?_without_test:1}
-BuildRequires:	perl-libnet
 BuildRequires:	perl-MIME-Base64
+BuildRequires:	perl-libnet
 %endif
+BuildRequires:	rpm-perlprov >= 3.0.3-18
 Requires:	perl
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

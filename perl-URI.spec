@@ -10,12 +10,12 @@ Summary(pl):	URI - obs³uga ujednoliconych identyfikatorów zasobów (bezwzglêdnych
 Summary(ru):	URI - Uniform Resource Identifier (URI) ÓÓÙÌËÉ, ËÁË ÕËÁÚÙ×ÁÅÔ RFC 2396
 Summary(uk):	URI - ÐÏÓÉÌÁÎÎÑ Uniform Resource Identifier (URI) ÑË ×ÉÚÎÁÞÅÎÏ × RFC 2396
 Name:		perl-URI
-Version:	1.23
-Release:	2
+Version:	1.24
+Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
-# Source0-md5: 3f79c5ac5bf394d3906c7adcec45edf0
+# Source0-md5:	12a195de0636330fa787e7e9a5d5103c
 BuildRequires:	perl-devel >= 5.6.1
 %if %{?_without_test:0}%{!?_without_test:1}
 BuildRequires:	perl-MIME-Base64
@@ -62,7 +62,8 @@ Módulo Perl URI - Este pacote contém o modulo URI.pm para manipular
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT

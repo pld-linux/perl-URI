@@ -3,7 +3,7 @@ Summary:	Perl URI module
 Summary(pl):	Modu³ Perla URI
 Name:		perl-URI
 Version:	1.11
-Release:	1
+Release:	2
 License:	Distributable
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl

@@ -2,14 +2,16 @@
 Summary:	Perl URI module
 Summary(pl):	Modu³ Perla URI
 Name:		perl-URI
-Version:	1.03
-Release:	0.1
+Version:	1.04
+Release:	1
 Copyright:	distributable
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/URI-%{version}.tar.gz
-%requires_eq	perl
-Requires:	%{perl_sitearch}
+BuildRequires:	perl >= 5.005_61
+BuildRequires:	perl-MIME-Base64
+Requires:	perl
+Requires:	%{perl_sitelib}
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -22,19 +24,15 @@ Modu³ Perla URI.
 %setup -q -n URI-%{version}
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" perl Makefile.PL
-make
+perl Makefile.PL
+make OPTIMIZE="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/%{perl_sitearch} \
-	$RPM_BUILD_ROOT%{_mandir}/man3 \
-	$RPM_BUILD_ROOT/%{perl_archlib}
+install -d $RPM_BUILD_ROOT/%{perl_archlib}
 
-make \
-	PREFIX=$RPM_BUILD_ROOT%{_prefix} \
-	INSTALLMAN3DIR=$RPM_BUILD_ROOT%{_mandir}/man3 \
-	install
+make install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 (
   cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/URI/

@@ -1,8 +1,9 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Perl URI module
 Summary(pl):	Modu³ Perla URI
+Summary(pt_BR):	Módulo URI para Perl
 Name:		perl-URI
-Version:	1.17
+Version:	1.18
 Release:	1
 License:	distributable
 Group:		Development/Languages/Perl
@@ -18,10 +19,15 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Perl URI module.
+Perl module URI - This package contains the URI.pm module to
+manipulate Uniform Resource Identifier (URI) from RFC 2396.
 
 %description -l pl
 Modu³ Perla URI.
+
+%description -l pt_BR
+Módulo Perl URI - Este pacote contém o modulo URI.pm para manipular
+"Uniform Resource Identifier" (URI) confirme especificado na RFC 2396.
 
 %prep
 %setup -q -n URI-%{version}

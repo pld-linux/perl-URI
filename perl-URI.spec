@@ -2,7 +2,7 @@
 Summary:	Perl URI module
 Summary(pl):	Modu³ Perla URI
 Name:		perl-URI
-Version:	1.05
+Version:	1.08
 Release:	1
 Copyright:	distributable
 Group:		Development/Languages/Perl
@@ -37,7 +37,7 @@ rm -rf $RPM_BUILD_ROOT
 (
   cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/URI/
   sed -e "s#$RPM_BUILD_ROOT##" .packlist >.packlist.new
-  mv .packlist.new .packlist
+  mv -f .packlist.new .packlist
 )
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/* \

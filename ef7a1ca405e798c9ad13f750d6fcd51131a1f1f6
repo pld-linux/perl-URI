@@ -1,0 +1,2 @@
+- %%include /usr/lib/rpm/macros.perl
+- BuildRequires: rpm-perlprov

@@ -1,25 +1,25 @@
 #
 # Conditional build:
 # _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	URI
-%define		pnam	URI
-Summary:	Perl URI module
-Summary(pl):	Modu³ Perla URI
-Summary(pt_BR):	Módulo URI para Perl
+%define	pdir	URI
+%define	pnam	URI
+Summary:	URI - Uniform Resource Identifiers (absolute and relative)
+#Summary(pl):	
 Summary(ru):	URI - Uniform Resource Identifier (URI) ÓÓÙÌËÉ, ËÁË ÕËÁÚÙ×ÁÅÔ RFC 2396
 Summary(uk):	URI - ĞÏÓÉÌÁÎÎÑ Uniform Resource Identifier (URI) ÑË ×ÉÚÎÁŞÅÎÏ × RFC 2396
 Name:		perl-URI
 Version:	1.22
-Release:	1
-License:	distributable
+Release:	2
+License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6.1
 BuildRequires:	rpm-perlprov >= 3.0.3-18
 %if %{?_without_test:0}%{!?_without_test:1}
-BuildRequires:	perl-MIME-Base64
 BuildRequires:	perl-libnet
+BuildRequires:	perl-MIME-Base64
 %endif
 Requires:	perl
 BuildArch:	noarch
@@ -37,7 +37,7 @@ Resource Identifier (URI) references as specified in RFC 2396.
 Uniform Resource Identifier (URI) ÓÓÙÌËÉ, ËÁË ÕËÁÚÙ×ÁÅÔ RFC 2396.
 
 %description -l pl
-Pakiet ten zawiera modu³ URI dla Perla. S³u¿y on do obróbki
+Ten pakiet zawiera modu³ URI dla Perla. S³u¿y on do obróbki
 ujednoliconych identyfikatorów zasobów (URI - Uniform Resource
 Identifier), zgodnych z RFC 2396.
 
@@ -55,6 +55,7 @@ Módulo Perl URI - Este pacote contém o modulo URI.pm para manipular
 %build
 perl Makefile.PL
 %{__make}
+
 %{!?_without_tests:%{__make} test}
 
 %install

@@ -1,4 +1,4 @@
-%define		perl_sitelib	%(eval "`perl -V:installsitelib`"; echo $installsitelib)
+%include	/usr/lib/rpm/macros.perl
 Summary:	Perl URI module
 Summary(pl):	Modu³ Perla URI
 Name:		perl-URI
@@ -8,6 +8,7 @@ Copyright:	distributable
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/URI-%{version}.tar.gz
+BuildRequires:	rpm-perlprov
 BuildRequires:	perl >= 5.005_03-10
 BuildRequires:	perl-MIME-Base64
 Requires:	perl

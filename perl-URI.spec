@@ -17,7 +17,7 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 # Source0-md5:	0298e4498b871cf2aa3e76f7dc8bd6b7
 BuildRequires:	perl-devel >= 5.6.1
-%if %{?_without_test:0}%{!?_without_test:1}
+%if %{?_without_tests:0}%{!?_without_tests:1}
 BuildRequires:	perl-MIME-Base64
 BuildRequires:	perl-libnet
 %endif

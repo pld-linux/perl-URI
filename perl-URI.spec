@@ -2,7 +2,7 @@
 Summary:	Perl URI module
 Summary(pl):	Modu³ Perla URI
 Name:		perl-URI
-Version:	1.15
+Version:	1.16
 Release:	1
 License:	Distributable
 Group:		Development/Languages/Perl
@@ -10,7 +10,7 @@ Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/URI/URI-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-18
-BuildRequires:	perl >= 5.6
+BuildRequires:	perl >= 5.6.1
 BuildRequires:	perl-MIME-Base64
 BuildRequires:	perl-libnet
 Requires:	perl

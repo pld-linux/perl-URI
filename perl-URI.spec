@@ -8,7 +8,7 @@ Copyright:	distributable
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/URI-%{version}.tar.gz
-BuildRequires:	perl >= 5.005_61
+BuildRequires:	perl >= 5.005_03-10
 BuildRequires:	perl-MIME-Base64
 Requires:	perl
 Requires:	%{perl_sitelib}

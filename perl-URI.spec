@@ -21,7 +21,6 @@ BuildRequires:	perl-MIME-Base64
 BuildRequires:	perl-libnet
 %endif
 BuildRequires:	rpm-perlprov >= 4.1-13
-Requires:	perl
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 

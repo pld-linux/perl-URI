@@ -3,8 +3,8 @@ Summary:	Perl URI module
 Summary(pl):	Modu³ Perla URI
 Summary(pt_BR):	Módulo URI para Perl
 Name:		perl-URI
-Version:	1.18
-Release:	2
+Version:	1.19
+Release:	1
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/URI/URI-%{version}.tar.gz

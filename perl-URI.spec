@@ -53,7 +53,7 @@ Módulo Perl URI - Este pacote contém o modulo URI.pm para manipular
 %setup -q -n %{pnam}-%{version}
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make}
 
 %{!?_without_tests:%{__make} test}

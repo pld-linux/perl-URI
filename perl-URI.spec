@@ -15,7 +15,7 @@ Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
-BuildRequires:	perl >= 5.6.1
+BuildRequires:	perl-devel >= 5.6.1
 %if %{?_without_test:0}%{!?_without_test:1}
 BuildRequires:	perl-MIME-Base64
 BuildRequires:	perl-libnet

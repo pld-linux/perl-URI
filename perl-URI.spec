@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	URI
-%define	pnam	URI
+%define		pdir	URI
+%define		pnam	URI
 Summary:	URI - Uniform Resource Identifiers (absolute and relative)
 Summary(pl):	URI - obs³uga ujednoliconych identyfikatorów zasobów (bezwzglêdnych i wzglêdnych)
 Summary(ru):	URI - Uniform Resource Identifier (URI) ÓÓÙÌËÉ, ËÁË ÕËÁÚÙ×ÁÅÔ RFC 2396

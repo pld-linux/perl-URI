@@ -1,7 +1,7 @@
-
+#
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	URI
 %define	pnam	URI
@@ -12,7 +12,8 @@ Summary(uk):	URI - посилання Uniform Resource Identifier (URI) як визначено в RF
 Name:		perl-URI
 Version:	1.30
 Release:	1
-License:	GPL/Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 # Source0-md5:	4da2adaba686a9409fb1deba3f0bfa04

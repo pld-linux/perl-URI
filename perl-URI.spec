@@ -1,7 +1,7 @@
-#
+
 # Conditional build:
-# _without_tests - do not perform "make test"
-#
+%bcond_without	tests	# do not perform "make test"
+
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	URI
 %define	pnam	URI
@@ -10,16 +10,15 @@ Summary(pl):	URI - obs³uga ujednoliconych identyfikatorów zasobów (bezwzglêdnych
 Summary(ru):	URI - Uniform Resource Identifier (URI) ÓÓÙÌËÉ, ËÁË ÕËÁÚÙ×ÁÅÔ RFC 2396
 Summary(uk):	URI - ÐÏÓÉÌÁÎÎÑ Uniform Resource Identifier (URI) ÑË ×ÉÚÎÁÞÅÎÏ × RFC 2396
 Name:		perl-URI
-Version:	1.25
+Version:	1.27
 Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
-# Source0-md5:	0298e4498b871cf2aa3e76f7dc8bd6b7
+# Source0-md5:	daaad1c7677d78acb0a53fc4493f2aef
 BuildRequires:	perl-devel >= 5.6.1
-%if %{?_without_tests:0}%{!?_without_tests:1}
+%if %{with tests}
 BuildRequires:	perl-MIME-Base64
-BuildRequires:	perl-libnet
 %endif
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
@@ -57,7 +56,7 @@ Módulo Perl URI - Este pacote contém o modulo URI.pm para manipular
 	INSTALLDIRS=vendor
 %{__make}
 
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT

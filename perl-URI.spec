@@ -14,7 +14,7 @@ BuildRequires:	perl-MIME-Base64
 BuildRequires:	perl-libnet
 Requires:	perl
 Requires:	%{perl_sitearch}
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Perl URI module.

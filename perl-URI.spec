@@ -6,9 +6,9 @@
 %define		pdir	URI
 %define		pnam	URI
 Summary:	URI - Uniform Resource Identifiers (absolute and relative)
-Summary(pl):	URI - obsЁuga ujednoliconych identyfikatorСw zasobСw (bezwzglЙdnych i wzglЙdnych)
-Summary(ru):	URI - Uniform Resource Identifier (URI) ссылки, как указывает RFC 2396
-Summary(uk):	URI - посилання Uniform Resource Identifier (URI) як визначено в RFC 2396
+Summary(pl.UTF-8):   URI - obsе┌uga ujednoliconych identyfikatorцЁw zasobцЁw (bezwzglд≥dnych i wzglд≥dnych)
+Summary(ru.UTF-8):   URI - Uniform Resource Identifier (URI) я│я│я▀п╩п╨п╦, п╨п╟п╨ я┐п╨п╟п╥я▀п╡п╟п╣я┌ RFC 2396
+Summary(uk.UTF-8):   URI - п©п╬я│п╦п╩п╟п╫п╫я▐ Uniform Resource Identifier (URI) я▐п╨ п╡п╦п╥п╫п╟я┤п╣п╫п╬ п╡ RFC 2396
 Name:		perl-URI
 Version:	1.35
 Release:	2
@@ -33,22 +33,22 @@ This package contains the URI.pm module with friends. The module
 implements the URI class. Objects of this class represent Uniform
 Resource Identifier (URI) references as specified in RFC 2396.
 
-%description -l ru
-Этот пакет содержит URI.pm и сопутствующие модули. Модуль реализует
-Uniform Resource Identifier (URI) ссылки, как указывает RFC 2396.
+%description -l ru.UTF-8
+п╜я┌п╬я┌ п©п╟п╨п╣я┌ я│п╬п╢п╣я─п╤п╦я┌ URI.pm п╦ я│п╬п©я┐я┌я│я┌п╡я┐я▌я┴п╦п╣ п╪п╬п╢я┐п╩п╦. п°п╬п╢я┐п╩я▄ я─п╣п╟п╩п╦п╥я┐п╣я┌
+Uniform Resource Identifier (URI) я│я│я▀п╩п╨п╦, п╨п╟п╨ я┐п╨п╟п╥я▀п╡п╟п╣я┌ RFC 2396.
 
-%description -l pl
-Ten pakiet zawiera moduЁ URI dla Perla. SЁu©y on do obrСbki
-ujednoliconych identyfikatorСw zasobСw (URI - Uniform Resource
+%description -l pl.UTF-8
+Ten pakiet zawiera moduе┌ URI dla Perla. Sе┌uе╪y on do obrцЁbki
+ujednoliconych identyfikatorцЁw zasobцЁw (URI - Uniform Resource
 Identifier), zgodnych z RFC 2396.
 
-%description -l pt_BR
-MСdulo Perl URI - Este pacote contИm o modulo URI.pm para manipular
+%description -l pt_BR.UTF-8
+MцЁdulo Perl URI - Este pacote contц╘m o modulo URI.pm para manipular
 "Uniform Resource Identifier" (URI) confirme especificado na RFC 2396.
 
-%description -l uk
-Цей пакет м╕стить URI.pm та потр╕бн╕ для нього модул╕. Модуль реал╕зу╓
-посилання Uniform Resource Identifier (URI) як зазначено в RFC 2396.
+%description -l uk.UTF-8
+п╕п╣п╧ п©п╟п╨п╣я┌ п╪я√я│я┌п╦я┌я▄ URI.pm я┌п╟ п©п╬я┌я─я√п╠п╫я√ п╢п╩я▐ п╫я▄п╬пЁп╬ п╪п╬п╢я┐п╩я√. п°п╬п╢я┐п╩я▄ я─п╣п╟п╩я√п╥я┐я■
+п©п╬я│п╦п╩п╟п╫п╫я▐ Uniform Resource Identifier (URI) я▐п╨ п╥п╟п╥п╫п╟я┤п╣п╫п╬ п╡ RFC 2396.
 
 %prep
 %setup -q -n %{pnam}-%{version}

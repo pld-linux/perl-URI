@@ -6,9 +6,9 @@
 %define		pdir	URI
 %define		pnam	URI
 Summary:	URI - Uniform Resource Identifiers (absolute and relative)
-Summary(pl.UTF-8):   URI - obsługa ujednoliconych identyfikatorów zasobów (bezwzględnych i względnych)
-Summary(ru.UTF-8):   URI - Uniform Resource Identifier (URI) ссылки, как указывает RFC 2396
-Summary(uk.UTF-8):   URI - посилання Uniform Resource Identifier (URI) як визначено в RFC 2396
+Summary(pl.UTF-8):	URI - obsługa ujednoliconych identyfikatorów zasobów (bezwzględnych i względnych)
+Summary(ru.UTF-8):	URI - Uniform Resource Identifier (URI) ссылки, как указывает RFC 2396
+Summary(uk.UTF-8):	URI - посилання Uniform Resource Identifier (URI) як визначено в RFC 2396
 Name:		perl-URI
 Version:	1.35
 Release:	2

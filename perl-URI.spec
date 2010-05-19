@@ -10,13 +10,13 @@ Summary(pl.UTF-8):	URI - obsługa ujednoliconych identyfikatorów zasobów (bezw
 Summary(ru.UTF-8):	URI - Uniform Resource Identifier (URI) ссылки, как указывает RFC 2396
 Summary(uk.UTF-8):	URI - посилання Uniform Resource Identifier (URI) як визначено в RFC 2396
 Name:		perl-URI
-Version:	1.40
+Version:	1.54
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
-# Source0-md5:	626cc85f1939a89981f82aae43497b53
+Source0:	http://www.cpan.org/modules/by-module/URI/GAAS/%{pnam}-%{version}.tar.gz
+# Source0-md5:	dabc621fd116064395483d80c329095b
 URL:		http://search.cpan.org/dist/URI/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -72,7 +72,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README Changes
+%doc Changes README
 %{perl_vendorlib}/URI
-%{perl_vendorlib}/*.pm
-%{_mandir}/man3/*
+%{perl_vendorlib}/URI.pm
+%{_mandir}/man3/URI*.3pm*

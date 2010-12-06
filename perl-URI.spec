@@ -15,11 +15,11 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
+Source0:	http://www.cpan.org/modules/by-module/URI/GAAS/%{pnam}-%{version}.tar.gz
+# Source0-md5:	5d60e6a7e6cdf8259a4082726fe2c92f
 URL:		http://search.cpan.org/dist/URI/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-Source0:	http://www.cpan.org/modules/by-module/URI/GAAS/%{pnam}-%{version}.tar.gz
-# Source0-md5:	5d60e6a7e6cdf8259a4082726fe2c92f
 %if %{with tests}
 BuildRequires:	perl-Encode
 BuildRequires:	perl-MIME-Base64

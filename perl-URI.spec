@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define		pdir	URI
 %define		pnam	URI
@@ -16,9 +16,10 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/URI/%{pnam}-%{version}.tar.gz
 # Source0-md5:	c236e0142adecc1b1104da664bc43a79
-URL:		http://search.cpan.org/dist/URI/
+URL:		https://metacpan.org/release/URI
 BuildRequires:	perl-devel >= 1:5.8.1
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
 BuildRequires:	perl(Exporter) >= 5.57
 BuildRequires:	perl-Encode

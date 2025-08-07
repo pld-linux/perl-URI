@@ -10,7 +10,7 @@ Summary(ru.UTF-8):	URI - Uniform Resource Identifier (URI) ссылки, как 
 Summary(uk.UTF-8):	URI - посилання Uniform Resource Identifier (URI) як визначено в RFC 2396
 Name:		perl-URI
 Version:	5.32
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl

@@ -24,10 +24,13 @@ BuildRequires:	rpmbuild(macros) >= 1.745
 BuildRequires:	perl(Exporter) >= 5.57
 BuildRequires:	perl(Net::Domain)
 BuildRequires:	perl-Encode
+BuildRequires:	perl-MIME-Base32
 BuildRequires:	perl-MIME-Base64 >= 2
 BuildRequires:	perl-Scalar-List-Utils
+BuildRequires:	perl-Test-Fatal
 BuildRequires:	perl-Test-Needs
 BuildRequires:	perl-Test-Simple >= 0.96
+BuildRequires:	perl-Test-Warnings
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

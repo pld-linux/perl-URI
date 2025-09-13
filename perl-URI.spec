@@ -14,9 +14,9 @@ Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/URI/%{pnam}-%{version}.tar.gz
+Source0:	https://www.cpan.org/modules/by-module/URI/%{pnam}-%{version}.tar.gz
 # Source0-md5:	56aa2bc3efb180eceb4c143378ab4327
-URL:		https://metacpan.org/release/URI
+URL:		https://metacpan.org/dist/URI
 BuildRequires:	perl-devel >= 1:5.8.1
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.745
@@ -24,7 +24,8 @@ BuildRequires:	rpmbuild(macros) >= 1.745
 BuildRequires:	perl(Exporter) >= 5.57
 BuildRequires:	perl(Net::Domain)
 BuildRequires:	perl-Encode
-BuildRequires:	perl-MIME-Base32
+# requires decode_base32, encode_base32 functions
+BuildRequires:	perl-MIME-Base32 >= 1.301
 BuildRequires:	perl-MIME-Base64 >= 2
 BuildRequires:	perl-Scalar-List-Utils
 BuildRequires:	perl-Test-Fatal

@@ -9,13 +9,13 @@ Summary(pl.UTF-8):	URI - obsługa ujednoliconych identyfikatorów zasobów (bezw
 Summary(ru.UTF-8):	URI - Uniform Resource Identifier (URI) ссылки, как указывает RFC 2396
 Summary(uk.UTF-8):	URI - посилання Uniform Resource Identifier (URI) як визначено в RFC 2396
 Name:		perl-URI
-Version:	5.35
+Version:	5.37
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	https://www.cpan.org/modules/by-module/URI/OALDERS/%{pnam}-%{version}.tar.gz
-# Source0-md5:	77df061af47e25e3c53d18bd2d562ad8
+# Source0-md5:	e204d211b2c865212d92df5d382864d2
 URL:		https://metacpan.org/dist/URI
 BuildRequires:	perl-devel >= 1:5.8.1
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -23,12 +23,12 @@ BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
 BuildRequires:	perl(Exporter) >= 5.57
 BuildRequires:	perl(Net::Domain)
+BuildRequires:	perl(Unicode::Normalize)
 BuildRequires:	perl-Encode
 # requires decode_base32, encode_base32 functions
 BuildRequires:	perl-MIME-Base32 >= 1.301
 BuildRequires:	perl-MIME-Base64 >= 2
 BuildRequires:	perl-Scalar-List-Utils
-BuildRequires:	perl-Test-Fatal
 BuildRequires:	perl-Test-Needs
 BuildRequires:	perl-Test-Simple >= 0.96
 BuildRequires:	perl-Test-Warnings
@@ -74,6 +74,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+# single-level auto/ dir; global cleanup only catches nested auto/X/Y/.packlist
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/auto/URI/.packlist
 
 %clean
 rm -rf $RPM_BUILD_ROOT
